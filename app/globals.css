@@ -42,11 +42,11 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 900px;
 }
 .welcomeframe{
   width: 100%;
-  height: 70vh;
+
   display: flex;
 ;
   column-gap: 20px;
@@ -94,12 +94,12 @@
 }
 .portfolio{
   width: 100%;
-  height: 100vh;
+
   background-color: aliceblue;
 }
 .portfolioframe{
   width: 100%;
-  height: 100vh;
+  
   flex-direction: column;
   padding: 20px;
   align-items: center;
@@ -158,4 +158,58 @@
 }
 .skillchooser div{
   cursor: pointer;
+}
+.portfolioposts{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.posttittle{
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.postdesc{
+  max-width: 300px;
+}
+.myitjobs{
+  padding:20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 200px;
+
+  border-top: 1px solid rgb(174, 174, 174);;
+  border-bottom: 1px solid rgb(174, 174, 174);
+
+
+}
+.postmaintittle{
+  font-size: 50px;
+  font-weight: 700;
+}
+.postsimage{
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+}
+.div{
+  width: 50px;
+  height: 50px;
+}
+.mousecover{
+  width: 100%;
+  padding: 10px;
+}
+.myitjobscursor{
+
+  padding: 30px;
+
+  color: white;
+}
+.portfoliojobsimage{
+  transition: 1s;
 }

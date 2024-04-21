@@ -8,6 +8,7 @@ export default function Home() {
    <>
    <Header></Header>
    <Welcome></Welcome>
+
    <Portfolio></Portfolio>
    </>
   );
