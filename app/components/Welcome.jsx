@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link as LinkScroll  } from 'react-scroll/modules'
 export default function Welcome() {
   
-  const [scrollheight , setscrollheight] = useState(window.scrollY)
+
   const [dots , setdot] = useState('dot1')
 
 
