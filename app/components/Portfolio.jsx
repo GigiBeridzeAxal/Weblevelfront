@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Portfolio() {
 
@@ -8,12 +8,14 @@ export default function Portfolio() {
     const [myitx , setmyitx] = useState()
     const [myity , setmyity] = useState()
 
-    window.addEventListener('mousemove' , (e) => {
+    useEffect(() => {   window.addEventListener('mousemove' , (e) => {
 
         setmyitx(e.clientX + 50)
         setmyity(e.clientY)
     })
+},[])
 
+ 
     const hiddenmyit = (e) => {
     
         setTimeout(() => {
