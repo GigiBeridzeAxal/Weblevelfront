@@ -1,68 +1,93 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Link as LinkScroll  } from 'react-scroll/modules'
+import { Link as LinkScroll} from 'react-scroll/modules'
 export default function Welcome() {
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const [dots , setdot] = useState('dot1')
-  const [scrollheight , setscrollheight] = useState()
+  const [scrollheigh , setScrollHeight] = useState(0)
+
+  const handleScroll = () => {
+    const scrollheight = window.scrollY;
+    setScrollHeight(scrollheight);
+
+    
+    if(scrollheight > 0){
+      if(scrollheight < 600){
+        setdot('dot1')
+      }
+    }
+  
+    if(scrollheight > 600){
+      if(scrollheight < 1200){
+        setdot("dot2")
+      }
+
+
+    }
+    if(scrollheight > 1100 ){
+      if( scrollheight < 1800){
+               setdot("dot3")
+
+      }
+
+    }
+    if(scrollheight > 1900 ){
+      if(scrollheight < 2700){
+               setdot("dot4")
+
+      }
+
+    }
+    if(scrollheight > 2800 ){
+      if(scrollheight < 5000){
+               setdot("dot5")
+
+      }
+
+    }
+    
+  };
 
 
 
 
-  useEffect(() => {
 
-    window.addEventListener('scroll' , () => {
-      setscrollheight(scrollY)
-    })
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
 
-  },[])
+
+
    
     
-    const dotsconfigure = () => {
-
-      if(scrollheight > 0){
-        if(scrollheight < 600){
-          setdot('dot1')
-        }
-      }
-    
-      if(scrollheight > 600){
-        if(scrollheight < 1200){
-          setdot("dot2")
-        }
+  
+          
 
 
-      }
-      if(scrollheight > 1100 ){
-        if( scrollheight < 1800){
-                 setdot("dot3")
-
-        }
- 
-      }
-      if(scrollheight > 1900 ){
-        if(scrollheight < 2700){
-                 setdot("dot4")
-
-        }
- 
-      }
-      if(scrollheight > 2800 ){
-        if(scrollheight < 5000){
-                 setdot("dot5")
-
-        }
- 
-      }
+   
   
   
-  
-  
-    }
-    dotsconfigure()
 
 
 
@@ -75,7 +100,7 @@ export default function Welcome() {
   return (
     <div id='Welcome' className="welcome">
 
-    <div className="dots">
+    <div  className="dots">
        
        {
         dots == "dot1" ?        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500} className="dot1 bg-blue-500"></LinkScroll> :        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500} className="dot1 bg-gray-300"></LinkScroll>
