@@ -5,42 +5,53 @@ export default function Welcome() {
   
 
   const [dots , setdot] = useState('dot1')
+  const [scrollheight , setscrollheight] = useState()
 
 
 
+
+  useEffect(() => {
+
+    window.addEventListener('scroll' , () => {
+      setscrollheight(scrollY)
+    })
+
+
+
+  },[])
    
     
     const dotsconfigure = () => {
 
-      if(window.scrollY > 0){
-        if(window.scrollY < 600){
+      if(scrollheight > 0){
+        if(scrollheight < 600){
           setdot('dot1')
         }
       }
     
-      if(window.scrollY > 600){
-        if(window.scrollY < 1200){
+      if(scrollheight > 600){
+        if(scrollheight < 1200){
           setdot("dot2")
         }
 
 
       }
-      if(window.scrollY > 1100 ){
-        if( window.scrollY < 1800){
+      if(scrollheight > 1100 ){
+        if( scrollheight < 1800){
                  setdot("dot3")
 
         }
  
       }
-      if(window.scrollY > 1900 ){
-        if( window.scrollY < 2700){
+      if(scrollheight > 1900 ){
+        if(scrollheight < 2700){
                  setdot("dot4")
 
         }
  
       }
-      if(window.scrollY > 2800 ){
-        if( window.scrollY < 5000){
+      if(scrollheight > 2800 ){
+        if(scrollheight < 5000){
                  setdot("dot5")
 
         }
