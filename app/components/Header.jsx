@@ -1,4 +1,6 @@
+'use client'
 import React from 'react'
+import { Link as LinkScroll  } from 'react-scroll/modules'
 
 export default function Header() {
   return (
@@ -11,10 +13,11 @@ export default function Header() {
     </div>
     <div className="center">
       <div className="sections flex align-center justify-center gap-5">
-        <div className="home">Home</div>
-        <div className="portfoliotittle">Portfolio</div>
-        <div className="experiencetittle">Experience</div>
-        <div className="Contacttittle">Contact</div>
+        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500} className="home cursor-pointer">Home</LinkScroll>
+        <LinkScroll to='Portfolio' spy={true} offset={50} smooth={true}  duration={500}  className="portfoliotittle cursor-pointer">Portfolio</LinkScroll>
+        <LinkScroll to='Experience' spy={true} offset={50} smooth={true}  duration={500}  className="experiencetittle cursor-pointer">Experience</LinkScroll>
+        <LinkScroll to='Plans' spy={true} offset={50} smooth={true}  duration={500}  className="Contacttittle cursor-pointer">Plans</LinkScroll>
+        <LinkScroll to='Contact' spy={true} offset={50} smooth={true}  duration={500} className="Contacttittle cursor-pointer">Contact</LinkScroll>
         
       </div>
     </div>

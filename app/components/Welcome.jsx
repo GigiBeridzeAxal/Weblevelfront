@@ -1,17 +1,91 @@
-import React from 'react'
-
+'use client'
+import React, { useEffect, useState } from 'react'
+import { Link as LinkScroll  } from 'react-scroll/modules'
 export default function Welcome() {
+  
+  const [scrollheight , setscrollheight] = useState(window.scrollY)
+  const [dots , setdot] = useState('dot1')
+
+
+  window.addEventListener('scroll' , () => {
+    
+    const dotsconfigure = () => {
+
+      if(window.scrollY > 0){
+        if(window.scrollY < 600){
+          setdot('dot1')
+        }
+      }
+    
+      if(window.scrollY > 600){
+        if(window.scrollY < 1200){
+          setdot("dot2")
+        }
+
+
+      }
+      if(window.scrollY > 1100 ){
+        if( window.scrollY < 1800){
+                 setdot("dot3")
+
+        }
+ 
+      }
+      if(window.scrollY > 1900 ){
+        if( window.scrollY < 2700){
+                 setdot("dot4")
+
+        }
+ 
+      }
+      if(window.scrollY > 2800 ){
+        if( window.scrollY < 5000){
+                 setdot("dot5")
+
+        }
+ 
+      }
+  
+  
+  
+  
+    }
+    dotsconfigure()
+
+  })
+
+
+
+
+
+
+
+
   return (
-    <div className="welcome">
+    <div id='Welcome' className="welcome">
 
     <div className="dots">
        
-       <div className="dot1 bg-blue-500"></div>
-       <div className="dot2 bg-gray-300"></div>
-       <div className="dot3 bg-gray-300"></div>
+       {
+        dots == "dot1" ?        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500} className="dot1 bg-blue-500"></LinkScroll> :        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500} className="dot1 bg-gray-300"></LinkScroll>
+       }
+        {
+        dots == "dot2" ?        <LinkScroll to='Portfolio' spy={true} offset={50} smooth={true}  duration={500}  className="dot2 bg-blue-500"></LinkScroll> :        <LinkScroll to='Portfolio' spy={true} offset={50} smooth={true}  duration={500} className="dot2 bg-gray-300"></LinkScroll>
+       }
+        {
+        dots == "dot3" ?        <LinkScroll to='Experience' spy={true} offset={50} smooth={true}  duration={500} className="dot3 bg-blue-500"></LinkScroll> :        <LinkScroll to='Experience' spy={true} offset={50} smooth={true}  duration={500} className="dot3 bg-gray-300"></LinkScroll>
+       }
+        {
+        dots == "dot4" ?        <LinkScroll to='Plans' spy={true} offset={50} smooth={true}  duration={500}  className="dot4 bg-blue-500"></LinkScroll> :        <LinkScroll to='Plans' spy={true} offset={50} smooth={true}  duration={500}className="dot4 bg-gray-300"></LinkScroll>
+       }
+        {
+        dots == "dot5" ?        <LinkScroll to='Contact' spy={true} offset={50} smooth={true}  duration={500} className="dot5 bg-blue-500"></LinkScroll> :        <LinkScroll to='Contact' spy={true} offset={50} smooth={true}  duration={500} className="dot5 bg-gray-300"></LinkScroll>
+       }
+
+
          
     </div>
-    <div className="welcomeframe flex  ">
+    <div  className="welcomeframe flex  ">
 
           <div className="welcometittle  ">
          <div className="firtline flex gap-1 align-center">Designing <span className='text-blue-500'>Digital</span> </div>
@@ -24,7 +98,7 @@ export default function Welcome() {
             
             <div className="backend">
                 
-                <div className="logo bg-gray-200 p-5   ">
+                <div className="logo  p-5   ">
     <img src={'/backendlogo.png'} width={200} height={300} alt="" /> 
 
     
@@ -39,8 +113,8 @@ export default function Welcome() {
             </div>
             <div className="Frontend">
                 
-                <div className="logo bg-gray-200 p-5   ">
-    <img src={'/Frontend.png'} width={500} height={300} alt="" /> 
+                <div className="logo  p-5   ">
+    <img src={'/about01.png'} width={600} height={300} alt="" /> 
 
     
             
@@ -54,8 +128,8 @@ export default function Welcome() {
             </div>
             <div className="backend">
                 
-                <div className="logo bg-gray-200 p-5   ">
-    <img src={'/Fullstack.png'} width={500} height={300} alt="" /> 
+                <div className="logo  p-5   ">
+    <img className='fullstacklogo' src={'/about04.png'} width={500} height={300} alt="" /> 
 
     
             

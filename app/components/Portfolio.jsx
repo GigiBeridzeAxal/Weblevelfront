@@ -39,32 +39,16 @@ export default function Portfolio() {
   return (
     
 
-    <div className="portfolio">
+    <div className="portfolio bg-gray-50">
         {myitopened == true ? <div className='myitjobscursor bg-gray-300' style={{position:"fixed" , left:myitx , top:myity}} ><img className='portfoliojobsimage' src={'/myitjobs1.png'} width={400} height={400} alt="" /></div> : <div></div>}
 
-        <div className="portfolioframe">
+        <div id='Portfolio' className="portfolioframe">
 
             <div className="portfoliotittler">Projects</div>
 
-            <div className="skillchooser flex pointer align-center justify-center gap-5  " >
-                {choosed == "All"  ?            <div className="Allportfolio bg-emerald-500 pointer text-white" onClick={(e) => changechoosed(e)}>All</div> : 
-                            <div className="Allportfolio pointer text-gray-500" onClick={(e) => changechoosed(e)}>All</div> }
-                                          {choosed == "Frontend"  ?                           <div className="Frontendportfolio bg-emerald-500 text-white  " onClick={(e) => changechoosed(e)}>Frontend </div> : 
-                                           <div className="Frontendportfolio pointer text-gray-500 " onClick={(e) => changechoosed(e)}>Frontend</div> }
-
-{choosed == "Backend"  ?                                          <div className="backendportfolio pointer text-white bg-emerald-500 " onClick={(e) => changechoosed(e)}>Backend</div> : 
-                                                          <div className="backendportfolio pointer text-gray-500 " onClick={(e) => changechoosed(e)}>Backend</div> }
-
-
-{choosed == "Fullstack"  ?                                        
-                <div className="fullstackportfolio pointer bg-emerald-500 text-white" onClick={(e) => changechoosed(e)}>Fullstack</div> : 
-                                                     
-                <div className="fullstackportfolio pointer text-gray-500" onClick={(e) => changechoosed(e)}>Fullstack</div> }
-
-
-
-        
-            </div>
+            <div className=" flex pointer align-center justify-center gap-5 text-gray-500 " >
+           Check My Projects Also You Can Check Live Websites too
+          </div>
       <br /><br /><br />
             <div className="portfolioposts " >
                 <a href='https://my-it-jobs-five.vercel.app/' className="mousecover" onPointerLeave={( ) => setmyitopened(false)} onMouseEnter={ (e) => changepos(e)}>

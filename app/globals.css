@@ -85,21 +85,26 @@
   top: 50%;
   right: 0px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
 }
-.dots div{
-  width: 13px;
-  height: 13px;
+.dots a{
+  font-size: 0;
+  cursor: pointer;
+  width:  13px !important;
+  height:   13px !important;
   border-radius: 50%;
   margin: 5px;
 }
+
 .portfolio{
   width: 100%;
 
-  background-color: aliceblue;
+
 }
 .portfolioframe{
   width: 100%;
-  
+  height: 700px;
   flex-direction: column;
   padding: 20px;
   align-items: center;
@@ -113,7 +118,7 @@
 .skillchooser{
   border: 1px solid black;
   border-radius: 25px;
-  height: 40px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,4 +217,221 @@
 }
 .portfoliojobsimage{
   transition: 1s;
+}
+.experience{
+  width: 100%;
+  height: 500px;
+
+  justify-content: center;
+  display: flex;
+}
+.experienecframe{
+
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+
+}
+.twentytittle{
+  font-weight: 600;
+}
+.expandworks{
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  display: flex;
+}
+.experiencelist{
+  max-width: 500px;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.experiencelist div{
+  align-items: center;
+}
+.experiencetittler{
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.ball{
+  border-radius: 50%;
+  padding: 10px;
+
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.baller{
+  text-align: center;
+}
+.myit{
+  margin-bottom: 20px;
+}
+.myittwentytittle{
+
+  font-weight: 600;
+}
+.fullstacklogo{
+  border-radius: 50%;
+  width: 250px;
+  height: 200px;
+}
+.contact{
+  margin-top: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.phone{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+
+
+
+}
+.mail{
+   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+
+
+}
+.contactframe{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infos{
+  width: 50%;
+  justify-content: space-around;
+}
+.inputsection input {
+
+  width: 70%;
+  background-color: aliceblue;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+
+}
+.inputsection{
+  margin-top: 50px;
+  width: 56%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textinput{
+  width: 70%;
+  padding: 15px;
+  background-color: aliceblue;
+}
+.contactittle{
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.plans{
+  margin-top: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plansframe{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: #1e293b;
+  padding: 10px;
+  min-height: 650px;
+}
+.plana{
+  background-color: white;
+  min-width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  height: 500px;
+}
+.planb{
+  background-color: white;
+  min-width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  height: 500px;
+}
+.planc{
+
+  justify-content: center;
+  background-color: white;
+  min-width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  height: 500px;
+}
+.plantittle{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+.ttl{
+  padding: 5px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+.price{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  letter-spacing: 2px;
+
+}
+.customcheckbox{
+  padding: 3px;
+  border-radius: 5px;
+}
+.offers div{
+  font-size: 18px;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+.btn{
+  margin-top: 20px;
+  width: 100%;
+}
+.btn button{
+  min-width: 250px;
+  text-align: center;
+}
+.header{
+  position: fixed;
 }
