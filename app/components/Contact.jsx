@@ -4,13 +4,7 @@ import React, { useEffect, useState } from 'react'
 export default function Contact()
 {
 
-  useEffect(() => {
 
-      window.addEventListener('scroll' , (e) =>{
-        console.log(window.scrollY)
-      })
-     
-  })
   return (
     <div className="contact">
         <div id='Contact' className="contactframe">

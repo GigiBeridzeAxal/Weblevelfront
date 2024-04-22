@@ -7,7 +7,8 @@ export default function Welcome() {
   const [dots , setdot] = useState('dot1')
 
 
-  window.addEventListener('scroll' , () => {
+  setTimeout(() => {
+      window.addEventListener('scroll' , () => {
     
     const dotsconfigure = () => {
 
@@ -53,6 +54,8 @@ export default function Welcome() {
     dotsconfigure()
 
   })
+  }, 2000);
+
 
 
 
