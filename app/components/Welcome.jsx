@@ -61,6 +61,13 @@ export default function Welcome() {
       }
 
     }
+    if(scrollheight > 3800 ){
+      if(scrollheight < 6000){
+               setdot("dot6")
+
+      }
+
+    }
     
   };
 
@@ -103,19 +110,22 @@ export default function Welcome() {
     <div  className="dots">
        
        {
-        dots == "dot1" ?        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500} className="dot1 bg-blue-500"></LinkScroll> :        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500} className="dot1 bg-gray-300"></LinkScroll>
+        dots == "dot1" ?        <LinkScroll to='Profile' spy={true} offset={50} smooth={true}  duration={500} className="dot1 bg-blue-500"></LinkScroll> :        <LinkScroll to='Profile' spy={true} offset={50} smooth={true}  duration={500} className="dot1 bg-gray-300"></LinkScroll>
        }
         {
-        dots == "dot2" ?        <LinkScroll to='Portfolio' spy={true} offset={50} smooth={true}  duration={500}  className="dot2 bg-blue-500"></LinkScroll> :        <LinkScroll to='Portfolio' spy={true} offset={50} smooth={true}  duration={500} className="dot2 bg-gray-300"></LinkScroll>
+        dots == "dot2" ?        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500}  className="dot2 bg-blue-500"></LinkScroll> :        <LinkScroll to='Welcome' spy={true} offset={50} smooth={true}  duration={500} className="dot2 bg-gray-300"></LinkScroll>
        }
         {
-        dots == "dot3" ?        <LinkScroll to='Experience' spy={true} offset={50} smooth={true}  duration={500} className="dot3 bg-blue-500"></LinkScroll> :        <LinkScroll to='Experience' spy={true} offset={50} smooth={true}  duration={500} className="dot3 bg-gray-300"></LinkScroll>
+        dots == "dot3" ?        <LinkScroll to='Portfolio' spy={true} offset={50} smooth={true}  duration={500} className="dot3 bg-blue-500"></LinkScroll> :        <LinkScroll to='Portfolio' spy={true} offset={50} smooth={true}  duration={500} className="dot3 bg-gray-300"></LinkScroll>
        }
         {
-        dots == "dot4" ?        <LinkScroll to='Plans' spy={true} offset={50} smooth={true}  duration={500}  className="dot4 bg-blue-500"></LinkScroll> :        <LinkScroll to='Plans' spy={true} offset={50} smooth={true}  duration={500}className="dot4 bg-gray-300"></LinkScroll>
+        dots == "dot4" ?        <LinkScroll to='Experience' spy={true} offset={50} smooth={true}  duration={500}  className="dot4 bg-blue-500"></LinkScroll> :        <LinkScroll to='Experience' spy={true} offset={50} smooth={true}  duration={500}className="dot4 bg-gray-300"></LinkScroll>
        }
         {
-        dots == "dot5" ?        <LinkScroll to='Contact' spy={true} offset={50} smooth={true}  duration={500} className="dot5 bg-blue-500"></LinkScroll> :        <LinkScroll to='Contact' spy={true} offset={50} smooth={true}  duration={500} className="dot5 bg-gray-300"></LinkScroll>
+        dots == "dot5" ?        <LinkScroll to='Plans' spy={true} offset={50} smooth={true}  duration={500} className="dot5 bg-blue-500"></LinkScroll> :        <LinkScroll to='Plans' spy={true} offset={50} smooth={true}  duration={500} className="dot5 bg-gray-300"></LinkScroll>
+       }
+         {
+        dots == "dot6" ?        <LinkScroll to='Contact' spy={true} offset={50} smooth={true}  duration={500} className="dot5 bg-blue-500"></LinkScroll> :        <LinkScroll to='Contact' spy={true} offset={50} smooth={true}  duration={500} className="dot5 bg-gray-300"></LinkScroll>
        }
 
 

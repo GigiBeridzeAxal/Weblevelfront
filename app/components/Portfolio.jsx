@@ -41,7 +41,7 @@ export default function Portfolio() {
   return (
     
 
-    <div className="portfolio bg-gray-50">
+    <div  className="portfolio bg-gray-50">
         {myitopened == true ? <div className='myitjobscursor bg-gray-300' style={{position:"fixed" , left:myitx , top:myity}} ><img className='portfoliojobsimage' src={'/myitjobs1.PNG'} width={400} height={400} alt="" /></div> : <div></div>}
 
         <div id='Portfolio' className="portfolioframe">
